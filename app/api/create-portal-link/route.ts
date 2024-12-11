@@ -23,7 +23,7 @@ export async function POST () {
             return_url: `${getURL()}/account`
         });
         return NextResponse.json({url});
-    } catch(error:any){
+    } catch(error:unknown){
         console.log(error);
         return new NextResponse('Internal Error',{status:500});
     }
