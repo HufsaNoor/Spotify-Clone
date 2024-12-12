@@ -178,10 +178,12 @@ export default async function Rootlayout({
   userSongs,
 }: {
   children: React.ReactNode;
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   userSongs: any; // Adjust type as needed
 }) {
   const products = await getActiveProductWithPrices();
+  console.log("userSongs before passing to Sidebar:", userSongs);
   
   return (
     <html lang="en">
@@ -190,6 +192,8 @@ export default async function Rootlayout({
         <SupabaseProvider>
           <UserProvider>
             <ModalProvider products={products}/>
+            
+
             <Sidebar songs={userSongs}>{children}</Sidebar>
             <Player />
           </UserProvider>
