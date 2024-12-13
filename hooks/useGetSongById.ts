@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 const useGetSongById = (id?: string) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [song, setSong] = useState<Song[] | undefined>(undefined); 
+  const [song, setSong] = useState<Song | undefined>(undefined); 
   const { supabaseClient } = useSessionContext();
 
   useEffect(() => {
@@ -23,6 +23,7 @@ const useGetSongById = (id?: string) => {
         .select('*')
         .eq('id', id)
         .single();
+        
 
       if (error) {
         console.error("Error fetching song:", error);

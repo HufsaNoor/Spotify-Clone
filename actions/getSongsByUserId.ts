@@ -4,7 +4,6 @@
 // import { cookies } from "next/headers";
 
 
-// // eslint-disable-next-line @typescript-eslint/no-unused-vars
 // const getSongsByUserId = async (id: string): Promise<Song[]> => {
 //     const supabase = await createServerComponentClient({
 //         cookies: cookies,
@@ -30,12 +29,14 @@
 //     if (error) {
 //         console.log(error.message);
 //     }
-//     // return (data as any) || [];
-//     return data || [];
+   
+//     return (data as any) || [];
 
 
 // };
 // export default getSongsByUserId;
+
+
 import { Song } from "@/types";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
