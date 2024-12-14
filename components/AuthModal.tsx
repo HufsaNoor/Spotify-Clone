@@ -21,29 +21,17 @@ import useAuthModal from '@/hooks/useAuthModal';
         }
 
     },[session, router, onClose]);
-
-
-
-
-
-
-
     const onChange = (open: boolean)=>{
         if (!open) {
             onClose();
         }
     }
-
-
-
    return (
     <Modal
     title="Welcome back"
     description="Login to your Account"
     isOpen={isOpen}
-    onChange={onChange}
-    
-    
+    onChange={onChange}   
     >
       <Auth
       theme='dark'

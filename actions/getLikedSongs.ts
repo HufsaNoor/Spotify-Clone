@@ -14,10 +14,6 @@ const getLikedSongs = async (): Promise<Song[]> =>{
         session
     }
    } = await supabase.auth.getSession();
-
-
-
-
    const {data,error} = await supabase
    .from ('liked_songs')
    .select('*, songs(*)')
