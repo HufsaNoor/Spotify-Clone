@@ -5,7 +5,7 @@ import { cookies } from "next/headers";
 
 
 const getActiveProductWithPrices = async (): Promise<ProductWithPrice[]> =>{
-    const supabase = createServerComponentClient({
+    const supabase =  createServerComponentClient({
         cookies: cookies,
    });
 

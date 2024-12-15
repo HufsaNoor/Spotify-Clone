@@ -107,7 +107,8 @@ const createOrRetrieveCustomer = async ({
         const {name, phone, address} = payment_method.billing_details;
         if (!name || !phone || !address) return;
 
-    
+         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+         // @ts-ignore
 
         await stripe.customers.update(customer, {name, phone, address});
         const {error} = await supabaseAdmin
